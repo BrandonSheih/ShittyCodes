@@ -1,0 +1,34 @@
+//insertionSort
+void NumberList::insertionSort() {
+	ListNode *currentNode = head->next;
+	ListNode *comparingNode = head;
+	ListNode *stationaryNode = currentNode;
+    int tempVal = 0;
+	
+	for (int i = size(); i > 1 && currentNode->value; --i) {
+		
+
+        
+        cout << "{{curNode: " << currentNode->value << ", compNode: " << comparingNode->value << ", stationNode: " << stationaryNode->value << "}}" << endl; //DEBUG
+
+		for (int j = i - 1; j > 1 && 
+             currentNode && currentNode->value < comparingNode->value;
+             --j) {
+			//changing everything
+            cout << "==curNode: " << currentNode->value << ", compNode: " << comparingNode->value << ", stationNode: " << stationaryNode->value << "==" << endl; //DEBUG
+
+            cout << endl << "---In For-- " << endl << "current= " << currentNode->value << " | compare= " << comparingNode->value << endl;
+			comparingNode->next = currentNode->next;
+            tempVal = comparingNode->value;
+
+            cout << ":current: " << currentNode->value << " | compare's Next: " << comparingNode->next->value << endl;  //DEBUG
+
+			currentNode->next = comparingNode;
+            
+            cout << ":current's next: " << currentNode->next->value << " | compare: " << comparingNode->value << endl;  //DEBUG
+
+     	    }
+
+        currentNode = stationaryNode->next;
+	}
+}
