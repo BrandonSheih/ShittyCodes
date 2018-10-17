@@ -266,35 +266,39 @@ class underflow {
 
 //insertionSort
 void NumberList::insertionSort() {
-	ListNode *currentNode = head->next;
+    ListNode *currentNode = head->next;
     ListNode *currentNodePrev = head;
     ListNode *compareNode = head;
-	
 
-	for (int i = size(); i > 1 && currentNode->value ; --i){
 
-        if (currentNodePrev->value <= currentNode->value) {
+    for (int i = 1; i < size() && currentNode->value; ++i) {
+
+        if (currentNodePrev->value <= currentNode->value) { //skip sorted part of list
             currentNode = currentNode->next;
             currentNodePrev = currentNodePrev->next;
         }
         else {
-            //If the element is the smaller than the head element we need to take care of the head element.
-            if (head->value > currentNode->value) {
+           
+            if (head->value > currentNode->value) { 
                 currentNodePrev->next = currentNode->next;
                 currentNode->next = head;
                 head = currentNode;
             }
             else {
-                compareNode = head;
-                while (compareNode->next != NULL && compareNode->next->value < currentNode->value) {
-                    compareNode = compareNode->next;
-                }
+
+                //search for point to switch to
+                for (compareNode = head; 
+                     compareNode->next != nullptr && compareNode->next->value < currentNode->value; 
+                     compareNode = compareNode->next);
+                
+                //update currentnode to next
                 currentNodePrev->next = currentNode->next;
                 currentNode->next = compareNode->next;
                 compareNode->next = currentNode;
             }
         }
-        currentNode = currentNodePrev->next;
 
-	}
+        currentNode = currentNodePrev->next;//continue.
+    }
 }
+
