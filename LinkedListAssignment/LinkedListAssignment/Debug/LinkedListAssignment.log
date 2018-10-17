@@ -1,2 +1,3 @@
-﻿  Main.cpp
+﻿  Numberlist.cpp
+c:\users\cheeto\documents\1 codes\dvc\shittycodes\linkedlistassignment\linkedlistassignment\numberlist.cpp(235): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
   LinkedListAssignment.vcxproj -> C:\Users\Cheeto\Documents\1 CODES\DVC\ShittyCodes\LinkedListAssignment\Debug\LinkedListAssignment.exe
