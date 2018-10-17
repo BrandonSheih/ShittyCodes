@@ -279,13 +279,14 @@ void NumberList::insertionSort() {
         }
         else {
            
-            if (head->value > currentNode->value) { 
+            //when the current needs to be moved to the head
+            if (head->value > currentNode->value) {
                 currentNodePrev->next = currentNode->next;
                 currentNode->next = head;
                 head = currentNode;
             }
-            else {
 
+            else {
                 //search for point to switch to
                 for (compareNode = head; 
                      compareNode->next != nullptr && compareNode->next->value < currentNode->value; 
