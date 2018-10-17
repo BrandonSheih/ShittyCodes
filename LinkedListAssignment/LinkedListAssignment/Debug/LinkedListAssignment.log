@@ -1,4 +1,0 @@
-﻿  Numberlist.cpp
-c:\users\brandonsheih\documents\github\shittycodes\linkedlistassignment\linkedlistassignment\numberlist.cpp(235): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-  LinkedListAssignment.vcxproj -> C:\Users\brandonsheih\Documents\GitHub\ShittyCodes\LinkedListAssignment\Debug\LinkedListAssignment.exe
-  LinkedListAssignment.vcxproj -> C:\Users\brandonsheih\Documents\GitHub\ShittyCodes\LinkedListAssignment\Debug\LinkedListAssignment.pdb (Full PDB)
